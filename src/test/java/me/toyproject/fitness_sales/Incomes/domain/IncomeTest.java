@@ -1,7 +1,6 @@
 package me.toyproject.fitness_sales.Incomes.domain;
 
 import me.toyproject.fitness_sales.domain.Account;
-import me.toyproject.fitness_sales.domain.Category;
 import me.toyproject.fitness_sales.domain.Income;
 import me.toyproject.fitness_sales.domain.PaymentType;
 import org.junit.Test;
@@ -15,7 +14,7 @@ public class IncomeTest {
     public void builder() {
         Income income = Income.builder()
                 .userNo(1)
-                .account(new Account("Test", new Category(), PaymentType.CARD, 2000))
+                .account(new Account("Test", "test example", PaymentType.CARD, 2000))
                 .build();
         assertThat(income).isNotNull();
     }
@@ -23,7 +22,7 @@ public class IncomeTest {
     @Test(expected = NullPointerException.class)
     public void builderMustHaveUserNo() {
         Income income = Income.builder()
-                .account(new Account("Test", new Category(), PaymentType.CARD, 2000))
+                .account(new Account("Test", "test example", PaymentType.CARD, 2000))
                 .build();
     }
 
