@@ -19,8 +19,11 @@ public class Income {
     @NonNull
     private Integer userNo;
     @NonNull
+    private Integer categoryId;
+    @NonNull
     @Embedded
     private Account account;
+    private String memo;
     private boolean isCancel;
     private boolean isDelete;
     @CreationTimestamp

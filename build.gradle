@@ -24,9 +24,11 @@ dependencies {
 //    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
-//    runtimeOnly 'org.postgresql:postgresql'
+    runtimeOnly 'org.postgresql:postgresql'
     testRuntimeOnly 'com.h2database:h2'
 
+    implementation group: 'com.graphql-java', name: 'graphql-spring-boot-starter', version: '5.0.2'
+    implementation group: 'com.graphql-java', name: 'graphql-java-tools', version: '5.2.4'
 
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

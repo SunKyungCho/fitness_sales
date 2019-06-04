@@ -17,13 +17,11 @@ public class Account {
     @NonNull
     private String description;
     @NonNull
-    private String firstCategory;
-    private String secondCategory;
-    @NonNull
     @Enumerated(EnumType.STRING)
-    private PaymentType paymentType;
+    private MethodOfPayment methodOfPayment;
     @NonNull
     private Integer money;
-    private String memo;
+
+
 
 }
