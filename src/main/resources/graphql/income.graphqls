@@ -1,0 +1,26 @@
+
+type Income {
+
+    id: Int!
+    categoryId: Int!
+    account: Account!
+    memo: String
+    isCancel: Boolean
+}
+
+type Account {
+
+    description: String!
+    methodOfpayment: String!
+    money:Int!
+
+}
+
+# The Root Query for the application
+type Query {
+    getIncomes : [Income]!
+}
+
+
+# The Root Mutaion for the application not yet
+#type Mutation { }

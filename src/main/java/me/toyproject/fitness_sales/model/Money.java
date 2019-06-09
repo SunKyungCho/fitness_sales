@@ -1,4 +1,4 @@
-package me.toyproject.fitness_sales.domain;
+package me.toyproject.fitness_sales.model;
 
 
 import lombok.*;
@@ -7,21 +7,17 @@ import javax.persistence.Embeddable;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
-@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Embeddable
-public class Account {
+public class Money {
 
-    @NonNull
-    private String description;
+
     @NonNull
     @Enumerated(EnumType.STRING)
     private MethodOfPayment methodOfPayment;
     @NonNull
-    private Integer money;
-
-
+    private Integer value;
 
 }

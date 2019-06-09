@@ -1,6 +1,7 @@
-package me.toyproject.fitness_sales.domain;
+package me.toyproject.fitness_sales.expense;
 
 import lombok.*;
+import me.toyproject.fitness_sales.model.Money;
 
 import java.time.LocalDateTime;
 
@@ -11,7 +12,7 @@ public class Expense {
 
     private Integer id;
     private Integer UserNo;
-    private Account account;
+    private Money money;
     private boolean isCancel;
     private boolean isDelete;
     private LocalDateTime registerDate;
